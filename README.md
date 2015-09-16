@@ -1,18 +1,18 @@
 django-dbmessages
 =================
 
-**Almost like django.contrib.messages,
-but doesn't need request to message a user.**
+It's almost like django.contrib.messages, but it doesn't need request to message a user.
 
-In fact, django-dbmessages is but a very thin and simple layer
-on top of Django's ``contrib.messages``.
+Implementation-wise, it's a layer on top of Django's ``contrib.messages``.
 
-To message a user, you simply create and save an instance
-of provided ``Message`` model via shell, Django admin, or some other means.
+To message a user you'll simply create and save an instance
+of dbmessages' ``Message`` model via shell, Django admin, or some other means.
 
-``Message`` model has all the same attributes you'd normally pass
-to ``contrib.messages`` (level, message, extra_tags),
-and in addition a ForeignKey link to User model.
+``Message`` model has, as fields, the attributes you'd normally pass
+to ``contrib.messages`` (level, message, extra_tags) plus a ForeignKey link to User model.
+
+You'll have to supply the addressee user yourself, this app doesn't do any magic
+in that regard.
 
 The next time given user appears on the site, middleware provided by dbmessages
 checks if user has any messages for them, and adds them to request using regular
