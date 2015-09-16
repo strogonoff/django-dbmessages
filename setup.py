@@ -10,14 +10,14 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-dbmessages',
-    version='0.1.1',
+    version='0.2.0a',
     packages=['dbmessages'],
     include_package_data=True,
     license='BSD License',
     description='Request-independent messaging for Django on top of contrib.messages',
     long_description=README,
-    author='oDesk',
-    author_email='python@odesk.com',
+    author='Upwork, Anton Strogonoff',
+    author_email='python@upwork.com',
     maintainer='Anton Strogonoff',
     maintainer_email='anton@strogonoff.name',
     download_url='http://github.com/strogonoff/django-dbmessages',
