@@ -1,5 +1,7 @@
 #coding: utf-8
 
+from decimal import Decimal
+
 import django
 from django.conf import settings
 from django.db import models
@@ -7,9 +9,11 @@ from django.contrib.messages.storage.base import Message as stock_message_cls
 
 
 def get_user_model_fk_ref():
-    ver = django.VERSION
+    django_ver = Decimal('{maj}.{min}'.format(
+        maj=django.VERSION[0],
+        min=django.VERSION[1]))
 
-    if ver[0] >= 1 and ver[1] >= 5:
+    if django_ver > Decimal('1.5'):
         return settings.AUTH_USER_MODEL
     else:
         return 'auth.User'
