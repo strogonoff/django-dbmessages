@@ -42,3 +42,18 @@ Now you can get into shell and address a message to yourself:
 Provided your front-end is integrated with Django's ``contrib.messages``,
 you should see the "Ahoy there" message the next time you log in
 under your account.
+
+
+Changelog
+---------
+
+0.2.0
+~~~~~
+
+* Added Django-style initial migration, to support Django >=1.7.
+* Corrected check for Django version when choosing user model reference.
+
+0.1.1
+~~~~~
+
+First stable release.
