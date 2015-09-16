@@ -47,13 +47,11 @@ under your account.
 Changelog
 ---------
 
-0.2.0
-~~~~~
+**0.2.0**
 
-* Added Django-style initial migration, to support Django >=1.7.
-* Corrected check for Django version when choosing user model reference.
+- Added Django-style initial migration, to support Django >=1.7.
+- Corrected check for Django version when choosing user model reference.
 
-0.1.1
-~~~~~
+**0.1.1**
 
 First stable release.
